@@ -1,4 +1,8 @@
 ## Customize test commands
 test:
-  override:
-    - phpunit test/unit-tests
+ post:
+   - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+   - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+## Customize build
+general:
+  build_dir: src

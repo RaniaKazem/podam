@@ -1,2 +1,4 @@
-test: override:
-    - php ./test-suite/run.php --unit-tests
+## Customize test commands
+test:
+  override:
+    - phpunit test/unit-tests

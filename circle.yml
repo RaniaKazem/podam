@@ -1,3 +1,2 @@
-test:
-     override:
+test: override:
     - php ./test-suite/run.php --unit-tests
